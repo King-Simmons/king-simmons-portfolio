@@ -1,8 +1,9 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { render, screen } from "@testing-library/react";
+import type { ReactElement } from "react";
 import Layout from "../Layout";
 
-const renderWithChakra = (ui: React.ReactElement) =>
+const renderWithChakra = (ui: ReactElement) =>
   render(<ChakraProvider>{ui}</ChakraProvider>);
 
 describe("Layout", () => {
