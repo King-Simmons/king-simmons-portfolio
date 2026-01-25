@@ -19,13 +19,7 @@ const contactCards = [
     value: "linkedin.com/in/king-simmons",
     href: "https://linkedin.com/in/king-simmons",
     description: "Follow my product design case studies and updates.",
-  },
-  {
-    label: "GitHub",
-    value: "github.com/king-simmons",
-    href: "https://github.com/king-simmons",
-    description: "Browse my front-end experiments and open-source work.",
-  },
+  }
 ];
 
 const ContactPage = () => {
