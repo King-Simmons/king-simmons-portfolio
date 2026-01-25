@@ -3,24 +3,6 @@ import { render, screen } from "@testing-library/react";
 import type { ReactElement } from "react";
 import Layout from "../Layout";
 
-jest.mock("next/link", () => {
-  const React = require("react");
-  return {
-    __esModule: true,
-    default: React.forwardRef(function Link(
-      props: { href: string; children: any },
-      ref: any
-    ) {
-      const { href, children } = props;
-      return (
-        <a ref={ref} href={href}>
-          {children}
-        </a>
-      );
-    }),
-  };
-});
-
 const renderWithChakra = (ui: ReactElement) =>
   render(<ChakraProvider>{ui}</ChakraProvider>);
 

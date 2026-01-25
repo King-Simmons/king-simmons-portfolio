@@ -2,7 +2,42 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { ReactElement } from "react";
-import ResumePage from "../resume";
+import ResumePage from "../../pages/resume";
+
+jest.mock("next/link", () => {
+  const React = require("react");
+  return {
+    __esModule: true,
+    default: React.forwardRef(function Link(
+      props: { href: string; children: any },
+      ref: any
+    ) {
+      const { href, children } = props;
+      return (
+        <a ref={ref} href={href}>
+          {children}
+        </a>
+      );
+    }),
+  };
+});
+
+jest.mock("framer-motion", () => {
+  const React = require("react");
+  return {
+    __esModule: true,
+    motion: new Proxy(
+      {},
+      {
+        get: () =>
+          React.forwardRef(function MotionElement(props: any, ref: any) {
+            return <div ref={ref} {...props} />;
+          }),
+      }
+    ),
+    AnimatePresence: ({ children }: any) => <>{children}</>,
+  };
+});
 
 const renderWithChakra = (ui: ReactElement) =>
   render(<ChakraProvider>{ui}</ChakraProvider>);
