@@ -1,6 +1,9 @@
 import {
   Box,
+  Button,
+  ButtonGroup,
   Heading,
+  HStack,
   List,
   ListItem,
   SimpleGrid,
@@ -10,18 +13,66 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import resumeData from "../data/resume";
+import { useMemo, useState } from "react";
+import resumeData from "../data/resume.json";
 
 const ResumePage = () => {
+  const [view, setView] = useState<"snapshot" | "full">("full");
+  const downloads = useMemo(
+    () => resumeData.downloads ?? [],
+    []
+  );
+  const highlights =
+    view === "full"
+      ? resumeData.highlights
+      : resumeData.highlightsAlt ?? resumeData.highlights;
+
   return (
     <Stack spacing={8}>
-      <Stack spacing={3}>
-        <Heading as="h1" size="xl">
-          Resume
-        </Heading>
-        <Text color="gray.600" fontSize="lg">
-          {resumeData.summary}
-        </Text>
+      <Stack spacing={4}>
+        <Stack spacing={3}>
+          <Heading as="h1" size="xl">
+            Resume
+          </Heading>
+          <Text color="gray.600" fontSize="lg">
+            {resumeData.summary}
+          </Text>
+        </Stack>
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          spacing={4}
+          align={{ base: "flex-start", md: "center" }}
+          justify="space-between"
+        >
+          <ButtonGroup isAttached variant="outline">
+            <Button
+              onClick={() => setView("snapshot")}
+              isActive={view === "snapshot"}
+            >
+              Snapshot view
+            </Button>
+            <Button
+              onClick={() => setView("full")}
+              isActive={view === "full"}
+            >
+              Full view
+            </Button>
+          </ButtonGroup>
+          <HStack spacing={3}>
+            {downloads.map((link) => (
+              <Button
+                as="a"
+                key={link.label}
+                href={link.href}
+                download
+                colorScheme="teal"
+                variant="outline"
+              >
+                Download {link.label}
+              </Button>
+            ))}
+          </HStack>
+        </Stack>
       </Stack>
 
       <Box>
@@ -29,7 +80,7 @@ const ResumePage = () => {
           Highlights
         </Heading>
         <List spacing={2} color="gray.600">
-          {resumeData.highlights.map((item) => (
+          {highlights.map((item) => (
             <ListItem key={item}>• {item}</ListItem>
           ))}
         </List>
@@ -40,27 +91,34 @@ const ResumePage = () => {
           Experience
         </Heading>
         <Stack spacing={6}>
-          {resumeData.experience.map((role) => (
-            <Box key={`${role.company}-${role.role}`}>
-              <Stack
-                direction={{ base: "column", sm: "row" }}
-                justify="space-between"
-                spacing={1}
-              >
-                <Heading as="h3" size="sm">
-                  {role.role} · {role.company}
-                </Heading>
-                <Text color="gray.500" fontSize="sm">
-                  {role.period}
-                </Text>
-              </Stack>
-              <List spacing={2} mt={3} color="gray.600">
-                {role.impact.map((item) => (
-                  <ListItem key={item}>• {item}</ListItem>
-                ))}
-              </List>
-            </Box>
-          ))}
+          {resumeData.experience.map((role) => {
+            const impact =
+              view === "full"
+                ? role.impact
+                : role.impactAlt ?? role.impact;
+
+            return (
+              <Box key={`${role.company}-${role.role}`}>
+                <Stack
+                  direction={{ base: "column", sm: "row" }}
+                  justify="space-between"
+                  spacing={1}
+                >
+                  <Heading as="h3" size="sm">
+                    {role.role} · {role.company}
+                  </Heading>
+                  <Text color="gray.500" fontSize="sm">
+                    {role.period}
+                  </Text>
+                </Stack>
+                <List spacing={2} mt={3} color="gray.600">
+                  {impact.map((item) => (
+                    <ListItem key={item}>• {item}</ListItem>
+                  ))}
+                </List>
+              </Box>
+            );
+          })}
         </Stack>
       </Box>
 
