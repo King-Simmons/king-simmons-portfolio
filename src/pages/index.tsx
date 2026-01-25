@@ -8,6 +8,7 @@ import {
   Tag,
   Text,
 } from "@chakra-ui/react";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
 
 const HomePage = () => {
   return (
@@ -73,6 +74,7 @@ const HomePage = () => {
           </Box>
         ))}
       </SimpleGrid>
+      <TestimonialsCarousel />
     </Stack>
   );
 };
