@@ -3,12 +3,41 @@ import { render, screen } from "@testing-library/react";
 import type { ReactElement } from "react";
 import HomePage from "../index";
 
-jest.mock("next/link", () => ({
-  __esModule: true,
-  default: ({ href, children }: { href: string; children: ReactElement }) => (
-    <a href={href}>{children}</a>
-  ),
-}));
+
+jest.mock("next/link", () => {
+  const React = require("react");
+  return {
+    __esModule: true,
+    default: React.forwardRef(function Link(
+      props: { href: string; children: any },
+      ref: any
+    ) {
+      const { href, children } = props;
+      return (
+        <a ref={ref} href={href}>
+          {children}
+        </a>
+      );
+    }),
+  };
+});
+
+jest.mock("framer-motion", () => {
+  const React = require("react");
+  return {
+    __esModule: true,
+    motion: new Proxy(
+      {},
+      {
+        get: () =>
+          React.forwardRef(function MotionElement(props: any, ref: any) {
+            return <div ref={ref} {...props} />;
+          }),
+      }
+    ),
+    AnimatePresence: ({ children }: any) => <>{children}</>,
+  };
+});
 
 jest.mock("../../components/TestimonialsCarousel", () => ({
   __esModule: true,
