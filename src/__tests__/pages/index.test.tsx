@@ -1,8 +1,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { render, screen } from "@testing-library/react";
 import type { ReactElement } from "react";
-import HomePage from "../index";
-
+import HomePage from "../../pages/index";
 
 jest.mock("next/link", () => {
   const React = require("react");
