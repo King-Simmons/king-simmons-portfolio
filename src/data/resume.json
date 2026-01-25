@@ -1,0 +1,64 @@
+{
+  "summary": "Product designer and front-end developer specializing in experience-led product strategy, inclusive design systems, and responsive interfaces.",
+  "downloads": [
+    {
+      "label": "PDF",
+      "href": "/King-Simmons-Resume.pdf"
+    },
+    {
+      "label": "DOCX",
+      "href": "/King-Simmons-Resume.docx"
+    }
+  ],
+  "highlights": [
+    "8+ years shaping consumer and enterprise digital products.",
+    "Partnered with cross-functional teams to launch 20+ features.",
+    "Led design systems that reduced build time by 30%."
+  ],
+  "experience": [
+    {
+      "role": "Senior Product Designer",
+      "company": "Brightwave Labs",
+      "period": "2021 — Present",
+      "impact": [
+        "Reframed onboarding to improve activation by 18% through rapid prototyping and research.",
+        "Collaborated with engineering to ship a modular design system for web and mobile.",
+        "Mentored a team of 4 designers across UX, UI, and research initiatives."
+      ]
+    },
+    {
+      "role": "Product Designer",
+      "company": "Atlas Commerce",
+      "period": "2018 — 2021",
+      "impact": [
+        "Designed inventory and analytics dashboards used by 5,000+ merchants.",
+        "Introduced accessibility standards that improved WCAG compliance across core flows.",
+        "Aligned roadmap priorities with stakeholders through quarterly design reviews."
+      ]
+    },
+    {
+      "role": "Front-End Designer",
+      "company": "Studio North",
+      "period": "2015 — 2018",
+      "impact": [
+        "Built responsive marketing sites for SaaS clients using React and Chakra UI.",
+        "Created reusable components that reduced handoff time for engineering teams."
+      ]
+    }
+  ],
+  "skills": [
+    "Product strategy",
+    "Design systems",
+    "UX research",
+    "Prototyping",
+    "React & TypeScript",
+    "Accessibility"
+  ],
+  "education": [
+    {
+      "program": "BFA, Digital Design",
+      "school": "Northeastern University",
+      "year": "2015"
+    }
+  ]
+}
