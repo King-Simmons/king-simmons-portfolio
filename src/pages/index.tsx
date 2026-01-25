@@ -5,6 +5,7 @@ import {
   Heading,
   SimpleGrid,
   Stack,
+  Tag,
   Text,
 } from "@chakra-ui/react";
 
@@ -15,6 +16,15 @@ const HomePage = () => {
         <Heading as="h1" size="2xl">
           Designing product experiences that feel effortless.
         </Heading>
+        <Tag
+          alignSelf="flex-start"
+          colorScheme="teal"
+          fontSize="sm"
+          px={3}
+          py={1}
+        >
+          Open for product design and front-end partnerships
+        </Tag>
         <Text color="gray.600" fontSize="lg">
           I am King Simmons, a product designer and front-end developer focused
           on translating complex problems into intuitive digital experiences. I
