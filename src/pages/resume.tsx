@@ -77,7 +77,7 @@ const ResumePage = () => {
           Highlights
         </Heading>
         <List spacing={2} color="gray.600">
-          {resumeData.highlights.map((item) => (
+          {highlights.map((item) => (
             <ListItem key={item}>• {item}</ListItem>
           ))}
         </List>

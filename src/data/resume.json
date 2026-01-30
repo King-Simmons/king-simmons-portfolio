@@ -15,6 +15,11 @@
     "Partnered with cross-functional teams to launch 20+ features.",
     "Led design systems that reduced build time by 30%."
   ],
+  "highlightsAlt": [
+    "8+ years guiding consumer and enterprise digital product teams.",
+    "Collaborated across disciplines to launch 20+ product features.",
+    "Built design systems that cut build time by 30%."
+  ],
   "experience": [
     {
       "role": "Senior Product Designer",
@@ -24,6 +29,11 @@
         "Reframed onboarding to improve activation by 18% through rapid prototyping and research.",
         "Collaborated with engineering to ship a modular design system for web and mobile.",
         "Mentored a team of 4 designers across UX, UI, and research initiatives."
+      ],
+      "impactAlt": [
+        "Redesigned onboarding to lift activation by 18% through rapid prototyping and research.",
+        "Partnered with engineering to deliver a modular design system for web and mobile.",
+        "Coached a team of 4 designers across UX, UI, and research initiatives."
       ]
     },
     {
@@ -34,6 +44,11 @@
         "Designed inventory and analytics dashboards used by 5,000+ merchants.",
         "Introduced accessibility standards that improved WCAG compliance across core flows.",
         "Aligned roadmap priorities with stakeholders through quarterly design reviews."
+      ],
+      "impactAlt": [
+        "Designed inventory and analytics dashboards adopted by 5,000+ merchants.",
+        "Established accessibility standards that improved WCAG compliance across core flows.",
+        "Aligned roadmap priorities with stakeholders via quarterly design reviews."
       ]
     },
     {
@@ -43,6 +58,10 @@
       "impact": [
         "Built responsive marketing sites for SaaS clients using React and Chakra UI.",
         "Created reusable components that reduced handoff time for engineering teams."
+      ],
+      "impactAlt": [
+        "Built responsive marketing sites for SaaS clients with React and Chakra UI.",
+        "Created reusable components that shortened handoff time for engineering teams."
       ]
     }
   ],

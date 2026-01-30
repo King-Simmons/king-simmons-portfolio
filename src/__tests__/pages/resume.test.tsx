@@ -66,6 +66,11 @@ describe("ResumePage", () => {
     expect(
       screen.getByRole("heading", { name: /Experience/i })
     ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        /Reframed onboarding to improve activation by 18% through rapid prototyping and research/i
+      )
+    ).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: /Snapshot view/i }));
 
