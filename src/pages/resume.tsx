@@ -22,10 +22,7 @@ const ResumePage = () => {
     () => resumeData.downloads ?? [],
     []
   );
-  const highlights =
-    view === "full"
-      ? resumeData.highlights
-      : resumeData.highlightsAlt ?? resumeData.highlights;
+  const showFullView = view === "full";
 
   return (
     <Stack spacing={8}>
@@ -86,71 +83,98 @@ const ResumePage = () => {
         </List>
       </Box>
 
-      <Box>
-        <Heading as="h2" size="md" mb={4}>
-          Experience
-        </Heading>
-        <Stack spacing={6}>
-          {resumeData.experience.map((role) => {
-            const impact =
-              view === "full"
-                ? role.impact
-                : role.impactAlt ?? role.impact;
+      {showFullView ? (
+        <>
+          <Box>
+            <Heading as="h2" size="md" mb={4}>
+              Experience
+            </Heading>
+            <Stack spacing={6}>
+              {resumeData.experience.map((role) => (
+                <Box key={`${role.company}-${role.role}`}>
+                  <Stack
+                    direction={{ base: "column", sm: "row" }}
+                    justify="space-between"
+                    spacing={1}
+                  >
+                    <Heading as="h3" size="sm">
+                      {role.role} · {role.company}
+                    </Heading>
+                    <Text color="gray.500" fontSize="sm">
+                      {role.period}
+                    </Text>
+                  </Stack>
+                  <List spacing={2} mt={3} color="gray.600">
+                    {role.impact.map((item) => (
+                      <ListItem key={item}>• {item}</ListItem>
+                    ))}
+                  </List>
+                </Box>
+              ))}
+            </Stack>
+          </Box>
 
-            return (
-              <Box key={`${role.company}-${role.role}`}>
-                <Stack
-                  direction={{ base: "column", sm: "row" }}
-                  justify="space-between"
-                  spacing={1}
-                >
-                  <Heading as="h3" size="sm">
-                    {role.role} · {role.company}
-                  </Heading>
-                  <Text color="gray.500" fontSize="sm">
-                    {role.period}
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+            <Box>
+              <Heading as="h2" size="md" mb={3}>
+                Skills
+              </Heading>
+              <Wrap>
+                {resumeData.skills.map((skill) => (
+                  <WrapItem key={skill}>
+                    <Tag colorScheme="teal">{skill}</Tag>
+                  </WrapItem>
+                ))}
+              </Wrap>
+            </Box>
+            <Box>
+              <Heading as="h2" size="md" mb={3}>
+                Education
+              </Heading>
+              <Stack spacing={2}>
+                {resumeData.education.map((entry) => (
+                  <Box key={entry.program}>
+                    <Text fontWeight="semibold">{entry.program}</Text>
+                    <Text color="gray.600">
+                      {entry.school} · {entry.year}
+                    </Text>
+                  </Box>
+                ))}
+              </Stack>
+            </Box>
+          </SimpleGrid>
+        </>
+      ) : (
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+          <Box>
+            <Heading as="h2" size="md" mb={3}>
+              Core skills
+            </Heading>
+            <Wrap>
+              {resumeData.skills.map((skill) => (
+                <WrapItem key={skill}>
+                  <Tag colorScheme="teal">{skill}</Tag>
+                </WrapItem>
+              ))}
+            </Wrap>
+          </Box>
+          <Box>
+            <Heading as="h2" size="md" mb={3}>
+              Education
+            </Heading>
+            <Stack spacing={2}>
+              {resumeData.education.map((entry) => (
+                <Box key={entry.program}>
+                  <Text fontWeight="semibold">{entry.program}</Text>
+                  <Text color="gray.600">
+                    {entry.school} · {entry.year}
                   </Text>
-                </Stack>
-                <List spacing={2} mt={3} color="gray.600">
-                  {impact.map((item) => (
-                    <ListItem key={item}>• {item}</ListItem>
-                  ))}
-                </List>
-              </Box>
-            );
-          })}
-        </Stack>
-      </Box>
-
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
-        <Box>
-          <Heading as="h2" size="md" mb={3}>
-            Skills
-          </Heading>
-          <Wrap>
-            {resumeData.skills.map((skill) => (
-              <WrapItem key={skill}>
-                <Tag colorScheme="teal">{skill}</Tag>
-              </WrapItem>
-            ))}
-          </Wrap>
-        </Box>
-        <Box>
-          <Heading as="h2" size="md" mb={3}>
-            Education
-          </Heading>
-          <Stack spacing={2}>
-            {resumeData.education.map((entry) => (
-              <Box key={entry.program}>
-                <Text fontWeight="semibold">{entry.program}</Text>
-                <Text color="gray.600">
-                  {entry.school} · {entry.year}
-                </Text>
-              </Box>
-            ))}
-          </Stack>
-        </Box>
-      </SimpleGrid>
+                </Box>
+              ))}
+            </Stack>
+          </Box>
+        </SimpleGrid>
+      )}
     </Stack>
   );
 };
