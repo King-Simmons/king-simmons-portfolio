@@ -17,12 +17,15 @@ import { useMemo, useState } from "react";
 import resumeData from "../data/resume.json";
 
 const ResumePage = () => {
-  const [view, setView] = useState<"snapshot" | "full">("full");
+  const [view, setView] = useState<"full" | "fullAlt">("full");
   const downloads = useMemo(
     () => resumeData.downloads ?? [],
     []
   );
-  const showFullView = view === "full";
+  const highlights =
+    view === "full"
+      ? resumeData.highlights ?? []
+      : resumeData.highlightsAlt ?? resumeData.highlights ?? [];
 
   return (
     <Stack spacing={8}>
@@ -43,16 +46,16 @@ const ResumePage = () => {
         >
           <ButtonGroup isAttached variant="outline">
             <Button
-              onClick={() => setView("snapshot")}
-              isActive={view === "snapshot"}
-            >
-              Snapshot view
-            </Button>
-            <Button
               onClick={() => setView("full")}
               isActive={view === "full"}
             >
               Full view
+            </Button>
+            <Button
+              onClick={() => setView("fullAlt")}
+              isActive={view === "fullAlt"}
+            >
+              Full view (alternate)
             </Button>
           </ButtonGroup>
           <HStack spacing={3}>
@@ -83,14 +86,19 @@ const ResumePage = () => {
         </List>
       </Box>
 
-      {showFullView ? (
-        <>
-          <Box>
-            <Heading as="h2" size="md" mb={4}>
-              Experience
-            </Heading>
-            <Stack spacing={6}>
-              {resumeData.experience.map((role) => (
+      <>
+        <Box>
+          <Heading as="h2" size="md" mb={4}>
+            Experience
+          </Heading>
+          <Stack spacing={6}>
+            {resumeData.experience.map((role) => {
+              const impactItems =
+                view === "full"
+                  ? role.impact
+                  : role.impactAlt ?? role.impact;
+
+              return (
                 <Box key={`${role.company}-${role.role}`}>
                   <Stack
                     direction={{ base: "column", sm: "row" }}
@@ -105,50 +113,20 @@ const ResumePage = () => {
                     </Text>
                   </Stack>
                   <List spacing={2} mt={3} color="gray.600">
-                    {role.impact.map((item) => (
+                    {impactItems.map((item) => (
                       <ListItem key={item}>• {item}</ListItem>
                     ))}
                   </List>
                 </Box>
-              ))}
-            </Stack>
-          </Box>
+              );
+            })}
+          </Stack>
+        </Box>
 
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
-            <Box>
-              <Heading as="h2" size="md" mb={3}>
-                Skills
-              </Heading>
-              <Wrap>
-                {resumeData.skills.map((skill) => (
-                  <WrapItem key={skill}>
-                    <Tag colorScheme="teal">{skill}</Tag>
-                  </WrapItem>
-                ))}
-              </Wrap>
-            </Box>
-            <Box>
-              <Heading as="h2" size="md" mb={3}>
-                Education
-              </Heading>
-              <Stack spacing={2}>
-                {resumeData.education.map((entry) => (
-                  <Box key={entry.program}>
-                    <Text fontWeight="semibold">{entry.program}</Text>
-                    <Text color="gray.600">
-                      {entry.school} · {entry.year}
-                    </Text>
-                  </Box>
-                ))}
-              </Stack>
-            </Box>
-          </SimpleGrid>
-        </>
-      ) : (
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
           <Box>
             <Heading as="h2" size="md" mb={3}>
-              Core skills
+              Skills
             </Heading>
             <Wrap>
               {resumeData.skills.map((skill) => (
@@ -174,7 +152,7 @@ const ResumePage = () => {
             </Stack>
           </Box>
         </SimpleGrid>
-      )}
+      </>
     </Stack>
   );
 };
