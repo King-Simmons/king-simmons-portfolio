@@ -59,7 +59,7 @@ describe("ResumePage", () => {
     ).toHaveAttribute("href", "/King-Simmons-Resume.docx");
   });
 
-  it("toggles between snapshot and full views", async () => {
+  it("toggles between full views with alternate bullet copy", async () => {
     const user = userEvent.setup();
     renderWithChakra(<ResumePage />);
 
@@ -71,14 +71,26 @@ describe("ResumePage", () => {
         /Reframed onboarding to improve activation by 18% through rapid prototyping and research/i
       )
     ).toBeInTheDocument();
+    expect(
+      screen.getByText(/8\+ years shaping consumer and enterprise digital products/i)
+    ).toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: /Snapshot view/i }));
+    await user.click(
+      screen.getByRole("button", { name: /Full view \(alternate\)/i })
+    );
 
     expect(
-      screen.queryByRole("heading", { name: /Experience/i })
-    ).not.toBeInTheDocument();
+      screen.getByRole("heading", { name: /Experience/i })
+    ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /Core skills/i })
+      screen.getByText(
+        /8\+ years guiding consumer and enterprise digital product teams/i
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        /Redesigned onboarding to lift activation by 18% through rapid prototyping and research/i
+      )
     ).toBeInTheDocument();
   });
 });
