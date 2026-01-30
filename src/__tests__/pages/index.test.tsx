@@ -23,6 +23,19 @@ jest.mock("next/link", () => {
 
 jest.mock("framer-motion", () => {
   const React = require("react");
+  const filterProps = (props: any) => {
+    const {
+      initial,
+      animate,
+      exit,
+      transition,
+      variants,
+      whileHover,
+      whileTap,
+      ...rest
+    } = props;
+    return rest;
+  };
   return {
     __esModule: true,
     motion: new Proxy(
@@ -30,7 +43,7 @@ jest.mock("framer-motion", () => {
       {
         get: () =>
           React.forwardRef(function MotionElement(props: any, ref: any) {
-            return <div ref={ref} {...props} />;
+            return <div ref={ref} {...filterProps(props)} />;
           }),
       }
     ),

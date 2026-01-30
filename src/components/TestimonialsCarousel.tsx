@@ -62,11 +62,13 @@ const TestimonialsCarousel = () => {
 
   return (
     <Box
+      as="section"
       borderWidth="1px"
       borderColor="gray.200"
       borderRadius="xl"
       p={{ base: 6, md: 8 }}
       bg="white"
+      aria-labelledby="testimonials-heading"
     >
       <Flex
         direction={{ base: "column", md: "row" }}
@@ -74,10 +76,10 @@ const TestimonialsCarousel = () => {
         gap={6}
       >
         <Stack spacing={4} flex="1">
-          <Heading as="h2" size="lg">
+          <Heading as="h2" size="lg" id="testimonials-heading">
             Testimonials
           </Heading>
-          <Text fontSize="lg" color="gray.700">
+          <Text fontSize="lg" color="gray.700" aria-live="polite" aria-atomic>
             “{activeTestimonial.quote}”
           </Text>
           <Stack spacing={1}>
@@ -93,6 +95,7 @@ const TestimonialsCarousel = () => {
             variant="outline"
             colorScheme="teal"
             alignSelf={{ base: "flex-start", md: "flex-end" }}
+            aria-pressed={!isPlaying}
           >
             {isPlaying ? "Pause rotation" : "Resume rotation"}
           </Button>

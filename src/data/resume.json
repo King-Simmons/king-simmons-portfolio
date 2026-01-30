@@ -11,14 +11,32 @@
     }
   ],
   "highlights": [
-    "8+ years shaping consumer and enterprise digital products.",
-    "Partnered with cross-functional teams to launch 20+ features.",
-    "Led design systems that reduced build time by 30%."
+    {
+      "summary": "8+ years shaping consumer and enterprise digital products.",
+      "detail": "Led end-to-end discovery and delivery across SaaS, commerce, and platform teams."
+    },
+    {
+      "summary": "Partnered with cross-functional teams to launch 20+ features.",
+      "detail": "Aligned product, engineering, and GTM stakeholders to keep launches on time."
+    },
+    {
+      "summary": "Led design systems that reduced build time by 30%.",
+      "detail": "Standardized core components and documentation to speed up handoffs."
+    }
   ],
   "highlightsAlt": [
-    "8+ years guiding consumer and enterprise digital product teams.",
-    "Collaborated across disciplines to launch 20+ product features.",
-    "Built design systems that cut build time by 30%."
+    {
+      "summary": "8+ years guiding consumer and enterprise digital product teams.",
+      "detail": "Focused on experience strategy, experimentation, and measurable outcomes."
+    },
+    {
+      "summary": "Collaborated across disciplines to launch 20+ product features.",
+      "detail": "Partnered with engineers and PMs to ship incremental releases quickly."
+    },
+    {
+      "summary": "Built design systems that cut build time by 30%.",
+      "detail": "Created reusable patterns that reduced regression and QA cycles."
+    }
   ],
   "experience": [
     {
@@ -26,14 +44,32 @@
       "company": "Brightwave Labs",
       "period": "2021 — Present",
       "impact": [
-        "Reframed onboarding to improve activation by 18% through rapid prototyping and research.",
-        "Collaborated with engineering to ship a modular design system for web and mobile.",
-        "Mentored a team of 4 designers across UX, UI, and research initiatives."
+        {
+          "summary": "Reframed onboarding to improve activation by 18% through rapid prototyping and research.",
+          "detail": "Mapped the first-session flow, validated concepts with 15+ interviews, and iterated weekly."
+        },
+        {
+          "summary": "Collaborated with engineering to ship a modular design system for web and mobile.",
+          "detail": "Established tokenized foundations and reusable templates across product squads."
+        },
+        {
+          "summary": "Mentored a team of 4 designers across UX, UI, and research initiatives.",
+          "detail": "Set growth plans, hosted weekly critiques, and paired on complex workflow design."
+        }
       ],
       "impactAlt": [
-        "Redesigned onboarding to lift activation by 18% through rapid prototyping and research.",
-        "Partnered with engineering to deliver a modular design system for web and mobile.",
-        "Coached a team of 4 designers across UX, UI, and research initiatives."
+        {
+          "summary": "Redesigned onboarding to lift activation by 18% through rapid prototyping and research.",
+          "detail": "Aligned stakeholders on new value moments and led high-fidelity concept validation."
+        },
+        {
+          "summary": "Partnered with engineering to deliver a modular design system for web and mobile.",
+          "detail": "Defined component APIs and migration playbooks to increase adoption."
+        },
+        {
+          "summary": "Coached a team of 4 designers across UX, UI, and research initiatives.",
+          "detail": "Led skill-building workshops and created shared research repositories."
+        }
       ]
     },
     {
@@ -41,14 +77,32 @@
       "company": "Atlas Commerce",
       "period": "2018 — 2021",
       "impact": [
-        "Designed inventory and analytics dashboards used by 5,000+ merchants.",
-        "Introduced accessibility standards that improved WCAG compliance across core flows.",
-        "Aligned roadmap priorities with stakeholders through quarterly design reviews."
+        {
+          "summary": "Designed inventory and analytics dashboards used by 5,000+ merchants.",
+          "detail": "Prioritized insights that reduced stock-outs and surfaced revenue trends."
+        },
+        {
+          "summary": "Introduced accessibility standards that improved WCAG compliance across core flows.",
+          "detail": "Published audit checklists and embedded automated contrast checks in QA."
+        },
+        {
+          "summary": "Aligned roadmap priorities with stakeholders through quarterly design reviews.",
+          "detail": "Presented outcome-based planning sessions with leadership and sales."
+        }
       ],
       "impactAlt": [
-        "Designed inventory and analytics dashboards adopted by 5,000+ merchants.",
-        "Established accessibility standards that improved WCAG compliance across core flows.",
-        "Aligned roadmap priorities with stakeholders via quarterly design reviews."
+        {
+          "summary": "Designed inventory and analytics dashboards adopted by 5,000+ merchants.",
+          "detail": "Built drill-down workflows that reduced support tickets by 22%."
+        },
+        {
+          "summary": "Established accessibility standards that improved WCAG compliance across core flows.",
+          "detail": "Partnered with QA to add manual testing scripts for keyboard navigation."
+        },
+        {
+          "summary": "Aligned roadmap priorities with stakeholders via quarterly design reviews.",
+          "detail": "Documented experiment learnings to inform cross-team decisions."
+        }
       ]
     },
     {
@@ -56,12 +110,24 @@
       "company": "Studio North",
       "period": "2015 — 2018",
       "impact": [
-        "Built responsive marketing sites for SaaS clients using React and Chakra UI.",
-        "Created reusable components that reduced handoff time for engineering teams."
+        {
+          "summary": "Built responsive marketing sites for SaaS clients using React and Chakra UI.",
+          "detail": "Optimized layout systems for fast landing page iteration and A/B testing."
+        },
+        {
+          "summary": "Created reusable components that reduced handoff time for engineering teams.",
+          "detail": "Delivered annotated Storybook libraries and QA-ready specs."
+        }
       ],
       "impactAlt": [
-        "Built responsive marketing sites for SaaS clients with React and Chakra UI.",
-        "Created reusable components that shortened handoff time for engineering teams."
+        {
+          "summary": "Built responsive marketing sites for SaaS clients with React and Chakra UI.",
+          "detail": "Collaborated with marketing leads to plan campaigns and performance audits."
+        },
+        {
+          "summary": "Created reusable components that shortened handoff time for engineering teams.",
+          "detail": "Standardized layout grids and interaction patterns across projects."
+        }
       ]
     }
   ],
