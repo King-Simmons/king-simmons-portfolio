@@ -4,8 +4,6 @@ import {
   ButtonGroup,
   Heading,
   HStack,
-  List,
-  ListItem,
   SimpleGrid,
   Stack,
   Tag,
@@ -14,6 +12,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
+import BulletAccordion from "../components/BulletAccordion";
 import resumeData from "../data/resume.json";
 
 const ResumePage = () => {
@@ -79,11 +78,7 @@ const ResumePage = () => {
         <Heading as="h2" size="md" mb={3}>
           Highlights
         </Heading>
-        <List spacing={2} color="gray.600">
-          {highlights.map((item) => (
-            <ListItem key={item}>• {item}</ListItem>
-          ))}
-        </List>
+        <BulletAccordion items={highlights} resetSignal={view} />
       </Box>
 
       <>
@@ -94,9 +89,7 @@ const ResumePage = () => {
           <Stack spacing={6}>
             {resumeData.experience.map((role) => {
               const impactItems =
-                view === "full"
-                  ? role.impact
-                  : role.impactAlt ?? role.impact;
+                view === "full" ? role.impact : role.impactAlt ?? role.impact;
 
               return (
                 <Box key={`${role.company}-${role.role}`}>
@@ -112,11 +105,12 @@ const ResumePage = () => {
                       {role.period}
                     </Text>
                   </Stack>
-                  <List spacing={2} mt={3} color="gray.600">
-                    {impactItems.map((item) => (
-                      <ListItem key={item}>• {item}</ListItem>
-                    ))}
-                  </List>
+                  <Box mt={3}>
+                    <BulletAccordion
+                      items={impactItems}
+                      resetSignal={`${view}-${role.company}`}
+                    />
+                  </Box>
                 </Box>
               );
             })}
