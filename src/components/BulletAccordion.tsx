@@ -1,5 +1,5 @@
 import { Box, Button, Stack, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 
 export type BulletItem = {
   summary: string;
@@ -13,6 +13,7 @@ interface BulletAccordionProps {
 
 const BulletAccordion = ({ items, resetSignal }: BulletAccordionProps) => {
   const [expandedIndex, setExpandedIndex] = useState<number>(-1);
+  const instanceId = useId();
 
   useEffect(() => {
     setExpandedIndex(-1);
@@ -30,7 +31,7 @@ const BulletAccordion = ({ items, resetSignal }: BulletAccordionProps) => {
     <Stack spacing={2}>
       {items.map((item, index) => {
         const isExpanded = expandedIndex === index;
-        const panelId = `bullet-panel-${index}`;
+        const panelId = `bullet-panel-${instanceId}-${index}`;
 
         return (
           <Box key={item.summary}>
