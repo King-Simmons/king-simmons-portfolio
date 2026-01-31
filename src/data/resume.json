@@ -1,5 +1,6 @@
 {
   "summary": "Results-driven Senior Software Engineer with experience building scalable backend and full stack systems using Java, Kotlin, SQL/NoSQL, and cloud platforms. Proven success delivering high-impact services, improving observability and reliability, and driving measurable outcomes across systems serving millions of users. Adept at cross-functional collaboration, rapid problem solving, and improving team velocity through code quality and mentorship.",
+  "summaryAlt": "Senior Software Engineer focused on backend reliability and full stack delivery, specializing in Java/Kotlin services, cloud platforms, and product collaboration to ship measurable outcomes.",
   "downloads": [
     {
       "label": "Backend & Systems PDF",
@@ -43,6 +44,8 @@
       "role": "Senior Software Engineer",
       "company": "The Home Depot",
       "period": "August 2025 — Present",
+      "summary": "Led backend reliability and observability improvements for high-volume pricing and logistics systems.",
+      "summaryAlt": "Drove cross-service improvements in testing, deployment, and cloud operations for internal platforms.",
       "impact": [
         {
           "summary": "Implemented trace context propagation across Pub/Sub services, reducing root-cause debugging time by 30%.",
@@ -92,6 +95,8 @@
       "role": "Software Engineer",
       "company": "Indeed",
       "period": "May 2022 — July 2025",
+      "summary": "Built backend services that improved profile completeness and discovery at global scale.",
+      "summaryAlt": "Shipped full stack experiments and mentorship initiatives to improve engagement and team execution.",
       "impact": [
         {
           "summary": "Designed and launched a profile enrichment system increasing profile completeness by 50%.",
@@ -141,6 +146,8 @@
       "role": "Software Engineer – Backend Testing & Reliability",
       "company": "General Motors",
       "period": "January 2021 — April 2022",
+      "summary": "Automated backend testing and CI/CD improvements for enterprise reliability initiatives.",
+      "summaryAlt": "Focused on reliability through automated UI/API coverage and agile delivery practices.",
       "impact": [
         {
           "summary": "Automated UI and REST API tests for 15+ features, reducing regression testing time by 50%.",
@@ -182,6 +189,16 @@
     "CI/CD",
     "Automated Testing",
     "Agile"
+  ],
+  "skillsAlt": [
+    "React",
+    "TypeScript",
+    "GraphQL",
+    "A/B Testing",
+    "Product Collaboration",
+    "UX Partnership",
+    "Observability",
+    "Automated Testing"
   ],
   "education": [
     {
