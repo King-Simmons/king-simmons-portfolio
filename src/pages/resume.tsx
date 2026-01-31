@@ -53,13 +53,13 @@ const ResumePage = () => {
               onClick={() => setView("full")}
               isActive={view === "full"}
             >
-              Full view
+              Backend Systems Focused
             </Button>
             <Button
               onClick={() => setView("fullAlt")}
               isActive={view === "fullAlt"}
             >
-              Full view (alternate)
+              Product Focused
             </Button>
           </ButtonGroup>
           <HStack spacing={3}>
@@ -79,59 +79,7 @@ const ResumePage = () => {
         </Stack>
       </Stack>
 
-      <Box>
-        <Heading as="h2" size="md" mb={3}>
-          Highlights
-        </Heading>
-        <BulletAccordion items={highlights} resetSignal={view} />
-      </Box>
-
       <>
-        <Box>
-          <Heading as="h2" size="md" mb={4}>
-            Experience
-          </Heading>
-          <Stack spacing={6}>
-            {resumeData.experience.map((role) => {
-              const impactItems =
-                view === "full" ? role.impact : role.impactAlt ?? role.impact;
-
-              const roleSummary =
-                view === "full"
-                  ? role.summary
-                  : role.summaryAlt ?? role.summary;
-
-              return (
-                <Box key={`${role.company}-${role.role}`}>
-                  <Stack
-                    direction={{ base: "column", sm: "row" }}
-                    justify="space-between"
-                    spacing={1}
-                  >
-                    <Heading as="h3" size="sm">
-                      {role.role} · {role.company}
-                    </Heading>
-                    <Text color="gray.500" fontSize="sm">
-                      {role.period}
-                    </Text>
-                  </Stack>
-                  {roleSummary ? (
-                    <Text color="gray.600" mt={2}>
-                      {roleSummary}
-                    </Text>
-                  ) : null}
-                  <Box mt={3}>
-                    <BulletAccordion
-                      items={impactItems}
-                      resetSignal={`${view}-${role.company}`}
-                    />
-                  </Box>
-                </Box>
-              );
-            })}
-          </Stack>
-        </Box>
-
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
           <Box>
             <Heading as="h2" size="md" mb={3}>
@@ -161,6 +109,78 @@ const ResumePage = () => {
             </Stack>
           </Box>
         </SimpleGrid>
+
+        <Box>
+          <Heading as="h2" size="md" mb={4}>
+            Experience
+          </Heading>
+          <Stack spacing={6}>
+            {resumeData.experience.map((role) => {
+              const impactItems =
+                view === "full" ? role.impact : role.impactAlt ?? role.impact;
+
+              const roleSummary =
+                view === "full"
+                  ? role.summary
+                  : role.summaryAlt ?? role.summary;
+
+              return (
+                <Box key={`${role.company}-${role.role}`}>
+                  <Stack
+                    direction={{ base: "column", sm: "row" }}
+                    justify="space-between"
+                    spacing={1}
+                  >
+                    <Stack spacing={0}>
+                      <Heading as="h3" size="sm">
+                        {role.role}
+                      </Heading>
+                      <Text fontWeight="semibold" color="teal.600">
+                        {role.company}
+                      </Text>
+                    </Stack>
+                    <Text color="gray.500" fontSize="sm">
+                      {role.period}
+                    </Text>
+                  </Stack>
+                  {roleSummary ? (
+                    <Text color="gray.600" mt={2}>
+                      {roleSummary}
+                    </Text>
+                  ) : null}
+                  <Box mt={3}>
+                    <BulletAccordion
+                      items={impactItems}
+                      resetSignal={`${view}-${role.company}`}
+                    />
+                  </Box>
+                </Box>
+              );
+            })}
+          </Stack>
+        </Box>
+
+        <Box>
+          <Heading as="h2" size="md" mb={3}>
+            Highlights
+          </Heading>
+          <BulletAccordion items={highlights} resetSignal={view} />
+        </Box>
+
+        <HStack spacing={3} flexWrap="wrap">
+          {downloads.map((link) => (
+            <Button
+              as="a"
+              key={`bottom-${link.label}`}
+              href={link.href}
+              download
+              colorScheme="teal"
+              variant="outline"
+            >
+              Download {link.label}
+            </Button>
+          ))}
+        </HStack>
       </>
     </Stack>
   );
