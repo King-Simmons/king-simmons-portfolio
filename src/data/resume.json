@@ -1,149 +1,215 @@
 {
-  "summary": "Product designer and front-end developer specializing in experience-led product strategy, inclusive design systems, and responsive interfaces.",
+  "summary": "Results-driven Software Engineer with 5+ years of experience building scalable backend systems and distributed services using Java, Kotlin, SQL/NoSQL, and cloud platforms. Proven track record of delivering high-impact features, improving observability and reliability, and supporting systems used by millions of users.",
+  "summaryAlt": "Full-stack Software Engineer with experience delivering user-facing features and backend services across large-scale consumer platforms. Strong collaborator with product, design, and engineering partners to ship measurable improvements to engagement and discoverability.",
   "downloads": [
     {
-      "label": "PDF",
-      "href": "/King-Simmons-Resume.pdf"
+      "label": "Backend & Systems PDF",
+      "href": "/resume/king-simmons-backend-systems.pdf"
     },
     {
-      "label": "DOCX",
-      "href": "/King-Simmons-Resume.docx"
+      "label": "UI / Product PDF",
+      "href": "/resume/king-simmons-ui-product.pdf"
     }
   ],
   "highlights": [
     {
-      "summary": "8+ years shaping consumer and enterprise digital products.",
-      "detail": "Led end-to-end discovery and delivery across SaaS, commerce, and platform teams."
+      "summary": "5+ years building scalable backend systems and distributed services.",
+      "detail": "Designed, shipped, and supported production systems using Java/Kotlin, Spring Boot, SQL/NoSQL, and cloud messaging."
     },
     {
-      "summary": "Partnered with cross-functional teams to launch 20+ features.",
-      "detail": "Aligned product, engineering, and GTM stakeholders to keep launches on time."
+      "summary": "Improved observability and reliability on critical services.",
+      "detail": "Implemented tracing and testing improvements to reduce debugging time and accelerate delivery."
     },
     {
-      "summary": "Led design systems that reduced build time by 30%.",
-      "detail": "Standardized core components and documentation to speed up handoffs."
+      "summary": "Delivered features at global scale.",
+      "detail": "Worked on platforms supporting tens to hundreds of millions of users with measurable adoption and engagement wins."
     }
   ],
   "highlightsAlt": [
     {
-      "summary": "8+ years guiding consumer and enterprise digital product teams.",
-      "detail": "Focused on experience strategy, experimentation, and measurable outcomes."
+      "summary": "Full-stack delivery across high-traffic product surfaces.",
+      "detail": "Built end-to-end features spanning UI, APIs, and data flows with a focus on usability and measurable outcomes."
     },
     {
-      "summary": "Collaborated across disciplines to launch 20+ product features.",
-      "detail": "Partnered with engineers and PMs to ship incremental releases quickly."
+      "summary": "Cross-functional execution with product and design.",
+      "detail": "Partnered with PMs, designers, and stakeholders to ship iterative improvements and validate impact."
     },
     {
-      "summary": "Built design systems that cut build time by 30%.",
-      "detail": "Created reusable patterns that reduced regression and QA cycles."
+      "summary": "Strong engineering fundamentals with product-minded framing.",
+      "detail": "Balances backend rigor with user-facing quality, experimentation, and performance."
     }
   ],
   "experience": [
     {
-      "role": "Senior Product Designer",
-      "company": "Brightwave Labs",
-      "period": "2021 — Present",
+      "role": "Senior Software Engineer",
+      "company": "The Home Depot",
+      "period": "August 2025 — Present",
+      "summary": "Senior Software Engineer focused on backend systems, observability, and data pipelines supporting internal pricing, logistics, and vendor platforms.",
+      "summaryAlt": "Senior Software Engineer contributing to cross-functional initiatives across backend services and internal user-facing tools.",
       "impact": [
         {
-          "summary": "Reframed onboarding to improve activation by 18% through rapid prototyping and research.",
-          "detail": "Mapped the first-session flow, validated concepts with 15+ interviews, and iterated weekly."
+          "summary": "Implemented trace context propagation across Pub/Sub services, reducing root-cause debugging time by 30%.",
+          "detail": "Enabled end-to-end observability across distributed services handling pricing, logistics, and vendor communication."
         },
         {
-          "summary": "Collaborated with engineering to ship a modular design system for web and mobile.",
-          "detail": "Established tokenized foundations and reusable templates across product squads."
+          "summary": "Built a reusable E2E testing framework that reduced manual setup time by 50%.",
+          "detail": "Created templates, dynamic test data generators, and onboarding documentation to standardize testing."
         },
         {
-          "summary": "Mentored a team of 4 designers across UX, UI, and research initiatives.",
-          "detail": "Set growth plans, hosted weekly critiques, and paired on complex workflow design."
+          "summary": "Owned and optimized GCP resources processing 100,000+ daily events.",
+          "detail": "Managed Pub/Sub topics, BigQuery tables, and scheduled queries to ensure reliable data flow."
+        },
+        {
+          "summary": "Led backend deployments and schema changes across 5+ services with zero downtime.",
+          "detail": "Coordinated PostgreSQL and Oracle schema changes while maintaining production stability."
         }
       ],
       "impactAlt": [
         {
-          "summary": "Redesigned onboarding to lift activation by 18% through rapid prototyping and research.",
-          "detail": "Aligned stakeholders on new value moments and led high-fidelity concept validation."
+          "summary": "Improved distributed system observability by implementing trace propagation across services.",
+          "detail": "Partnered with cross-functional teams to debug and validate end-to-end request flows."
         },
         {
-          "summary": "Partnered with engineering to deliver a modular design system for web and mobile.",
-          "detail": "Defined component APIs and migration playbooks to increase adoption."
+          "summary": "Introduced reusable E2E testing patterns to accelerate service onboarding.",
+          "detail": "Reduced setup friction for engineers by standardizing test scaffolding and documentation."
         },
         {
-          "summary": "Coached a team of 4 designers across UX, UI, and research initiatives.",
-          "detail": "Led skill-building workshops and created shared research repositories."
+          "summary": "Maintained reliability for high-volume data pipelines supporting internal tools.",
+          "detail": "Worked closely with stakeholders to ensure correctness and visibility."
+        },
+        {
+          "summary": "Executed coordinated backend releases across multiple services.",
+          "detail": "Maintained reliability standards during schema and deployment changes."
         }
       ]
     },
     {
-      "role": "Product Designer",
-      "company": "Atlas Commerce",
-      "period": "2018 — 2021",
+      "role": "Software Engineer",
+      "company": "Indeed",
+      "period": "May 2022 — July 2025",
+      "summary": "Software Engineer working primarily on backend services and distributed systems supporting large-scale profile and discovery platforms.",
+      "summaryAlt": "Full-stack Software Engineer delivering backend services and user-facing features for profile enrichment, notifications, and discovery experiences.",
       "impact": [
         {
-          "summary": "Designed inventory and analytics dashboards used by 5,000+ merchants.",
-          "detail": "Prioritized insights that reduced stock-outs and surfaced revenue trends."
+          "summary": "Designed and launched a profile enrichment system that increased profile completeness by ~50%.",
+          "detail": "Built backend services using Java, Kotlin, Spring Boot, PostgreSQL, and AWS S3 to ingest, validate, and persist profile data."
         },
         {
-          "summary": "Introduced accessibility standards that improved WCAG compliance across core flows.",
-          "detail": "Published audit checklists and embedded automated contrast checks in QA."
+          "summary": "Enabled profile-based discovery for 40M+ US and 230M+ global users.",
+          "detail": "Led backend service development, resolved production issues, and built dashboards to monitor adoption."
         },
         {
-          "summary": "Aligned roadmap priorities with stakeholders through quarterly design reviews.",
-          "detail": "Presented outcome-based planning sessions with leadership and sales."
+          "summary": "Improved email notification engagement by 15–20% through backend experimentation.",
+          "detail": "Implemented A/B tests and optimized delivery flows in collaboration with product teams."
+        },
+        {
+          "summary": "Built and maintained scalable microservices using Kotlin and Spring Boot.",
+          "detail": "Integrated services with PostgreSQL, AWS S3, and internal APIs to support long-term growth."
+        },
+        {
+          "summary": "Mentored junior engineers and helped stabilize execution after organizational changes.",
+          "detail": "Led retrospectives, improved onboarding documentation, and supported team delivery."
         }
       ],
       "impactAlt": [
         {
-          "summary": "Designed inventory and analytics dashboards adopted by 5,000+ merchants.",
-          "detail": "Built drill-down workflows that reduced support tickets by 22%."
+          "summary": "Delivered profile enrichment features that improved user discoverability and engagement.",
+          "detail": "Worked across backend services and UI surfaces to support richer profile experiences."
         },
         {
-          "summary": "Established accessibility standards that improved WCAG compliance across core flows.",
-          "detail": "Partnered with QA to add manual testing scripts for keyboard navigation."
+          "summary": "Expanded profile-based discovery across global markets.",
+          "detail": "Partnered with frontend engineers and designers to ship end-to-end features."
         },
         {
-          "summary": "Aligned roadmap priorities with stakeholders via quarterly design reviews.",
-          "detail": "Documented experiment learnings to inform cross-team decisions."
+          "summary": "Improved email engagement through coordinated frontend and backend experimentation.",
+          "detail": "Used A/B testing insights to iterate on copy, timing, and delivery flows."
+        },
+        {
+          "summary": "Contributed full-stack improvements alongside backend service ownership.",
+          "detail": "Enhanced UI flows while maintaining backend performance and reliability."
+        },
+        {
+          "summary": "Supported team growth through mentorship and collaboration.",
+          "detail": "Helped teammates ramp quickly and maintain delivery velocity."
         }
       ]
     },
     {
-      "role": "Front-End Designer",
-      "company": "Studio North",
-      "period": "2015 — 2018",
+      "role": "Software Engineer – Backend Testing & Reliability",
+      "company": "General Motors",
+      "period": "January 2021 — April 2022",
+      "summary": "Backend-focused engineer specializing in automated testing, service reliability, and CI/CD pipeline improvements.",
+      "summaryAlt": "Software Engineer contributing to test automation and quality initiatives across backend and UI-integrated systems.",
       "impact": [
         {
-          "summary": "Built responsive marketing sites for SaaS clients using React and Chakra UI.",
-          "detail": "Optimized layout systems for fast landing page iteration and A/B testing."
+          "summary": "Automated UI and REST API tests for 15+ features, reducing regression testing time by 50%.",
+          "detail": "Used Java, Selenium, and REST Assured to validate backend service integrations."
         },
         {
-          "summary": "Created reusable components that reduced handoff time for engineering teams.",
-          "detail": "Delivered annotated Storybook libraries and QA-ready specs."
+          "summary": "Improved CI/CD workflows to increase iteration velocity by 37%.",
+          "detail": "Enhanced automated testing pipelines in a SAFe Agile environment."
         }
       ],
       "impactAlt": [
         {
-          "summary": "Built responsive marketing sites for SaaS clients with React and Chakra UI.",
-          "detail": "Collaborated with marketing leads to plan campaigns and performance audits."
+          "summary": "Built automated test coverage to ensure backend service reliability.",
+          "detail": "Collaborated with developers and QA to define acceptance criteria."
         },
         {
-          "summary": "Created reusable components that shortened handoff time for engineering teams.",
-          "detail": "Standardized layout grids and interaction patterns across projects."
+          "summary": "Streamlined test automation processes to accelerate delivery.",
+          "detail": "Integrated testing improvements into CI/CD pipelines."
         }
       ]
     }
   ],
   "skills": [
-    "Product strategy",
-    "Design systems",
-    "UX research",
-    "Prototyping",
-    "React & TypeScript",
-    "Accessibility"
+    "Java",
+    "Kotlin",
+    "Spring Boot",
+    "Distributed Systems",
+    "PostgreSQL",
+    "AWS",
+    "GCP",
+    "Pub/Sub",
+    "Docker",
+    "Observability",
+    "Tracing",
+    "CI/CD",
+    "Automated Testing",
+    "REST APIs",
+    "GraphQL",
+    "Python",
+    "React",
+    "TypeScript",
+    "Agile"
+  ],
+  "skillsAlt": [
+    "React",
+    "TypeScript",
+    "GraphQL",
+    "REST APIs",
+    "A/B Testing",
+    "Product Collaboration",
+    "Java",
+    "Kotlin",
+    "Spring Boot",
+    "PostgreSQL",
+    "AWS",
+    "GCP",
+    "CI/CD",
+    "Automated Testing",
+    "Observability",
+    "Tracing",
+    "Docker",
+    "Pub/Sub",
+    "Python",
+    "Agile"
   ],
   "education": [
     {
-      "program": "BFA, Digital Design",
-      "school": "Northeastern University",
-      "year": "2015"
+      "program": "Bachelor of Science in Computer Science",
+      "school": "University of Georgia",
+      "year": "2020"
     }
   ]
 }

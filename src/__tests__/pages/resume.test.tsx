@@ -3,6 +3,7 @@ import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { ReactElement } from "react";
 import ResumePage from "../../pages/resume";
+import resumeData from "../../data/resume.json";
 
 jest.mock("next/link", () => {
   const React = require("react");
@@ -60,16 +61,13 @@ describe("ResumePage", () => {
     renderWithChakra(<ResumePage />);
 
     expect(
-      screen.getByText(
-        /Product designer and front-end developer specializing in experience-led product strategy/i
-      )
+      screen.getByText(resumeData.summary)
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: /Download PDF/i })
-    ).toHaveAttribute("href", "/King-Simmons-Resume.pdf");
-    expect(
-      screen.getByRole("link", { name: /Download DOCX/i })
-    ).toHaveAttribute("href", "/King-Simmons-Resume.docx");
+    resumeData.downloads.forEach((download) => {
+      expect(
+        screen.getByRole("link", { name: `Download ${download.label}` })
+      ).toHaveAttribute("href", download.href);
+    });
   });
 
   it("toggles between full views with alternate bullet copy", async () => {
@@ -79,20 +77,23 @@ describe("ResumePage", () => {
     expect(
       screen.getByRole("heading", { name: /Experience/i })
     ).toBeInTheDocument();
+    const [highlight, altHighlight] = [
+      resumeData.highlights[0],
+      resumeData.highlightsAlt[0],
+    ];
+    const [impact, altImpact] = [
+      resumeData.experience[0].impact[0],
+      resumeData.experience[0].impactAlt[0],
+    ];
+
     expect(
-      screen.getByRole("button", {
-        name: /Reframed onboarding to improve activation by 18% through rapid prototyping and research/i,
-      })
+      screen.getByRole("button", { name: highlight.summary })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("button", {
-        name: /8\+ years shaping consumer and enterprise digital products/i,
-      })
+      screen.getByRole("button", { name: impact.summary })
     ).toBeInTheDocument();
 
-    const impactButton = screen.getByRole("button", {
-      name: /Reframed onboarding to improve activation by 18% through rapid prototyping and research/i,
-    });
+    const impactButton = screen.getByRole("button", { name: impact.summary });
 
     await act(async () => {
       await user.click(impactButton);
@@ -100,9 +101,7 @@ describe("ResumePage", () => {
 
     expect(impactButton).toHaveAttribute("aria-expanded", "true");
     expect(
-      screen.getByText(
-        /Mapped the first-session flow, validated concepts with 15\+ interviews, and iterated weekly/i
-      )
+      screen.getByText(impact.detail)
     ).toBeInTheDocument();
 
     await act(async () => {
@@ -115,17 +114,13 @@ describe("ResumePage", () => {
       screen.getByRole("heading", { name: /Experience/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("button", {
-        name: /8\+ years guiding consumer and enterprise digital product teams/i,
-      })
+      screen.getByRole("button", { name: altHighlight.summary })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("button", {
-        name: /Redesigned onboarding to lift activation by 18% through rapid prototyping and research/i,
-      })
+      screen.getByRole("button", { name: altImpact.summary })
     ).toBeInTheDocument();
     const altImpactButton = screen.getByRole("button", {
-      name: /Redesigned onboarding to lift activation by 18% through rapid prototyping and research/i,
+      name: altImpact.summary,
     });
 
     expect(altImpactButton).toHaveAttribute("aria-expanded", "false");
