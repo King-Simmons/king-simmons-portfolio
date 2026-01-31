@@ -48,7 +48,7 @@ const ResumePage = () => {
           align={{ base: "flex-start", md: "center" }}
           justify="space-between"
         >
-          <ButtonGroup isAttached variant="outline">
+          <ButtonGroup isAttached variant="outline" size="sm">
             <Button
               onClick={() => setView("full")}
               isActive={view === "full"}
@@ -62,7 +62,7 @@ const ResumePage = () => {
               Product Focused
             </Button>
           </ButtonGroup>
-          <HStack spacing={3}>
+          <HStack spacing={2}>
             {downloads.map((link) => (
               <Button
                 as="a"
@@ -70,7 +70,8 @@ const ResumePage = () => {
                 href={link.href}
                 download
                 colorScheme="teal"
-                variant="outline"
+                variant="ghost"
+                size="sm"
               >
                 Download {link.label}
               </Button>
@@ -167,7 +168,7 @@ const ResumePage = () => {
           <BulletAccordion items={highlights} resetSignal={view} />
         </Box>
 
-        <HStack spacing={3} flexWrap="wrap">
+        <HStack spacing={2} flexWrap="wrap">
           {downloads.map((link) => (
             <Button
               as="a"
@@ -175,7 +176,8 @@ const ResumePage = () => {
               href={link.href}
               download
               colorScheme="teal"
-              variant="outline"
+              variant="ghost"
+              size="sm"
             >
               Download {link.label}
             </Button>
