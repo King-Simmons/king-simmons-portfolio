@@ -17,14 +17,19 @@ import resumeData from "../data/resume.json";
 
 const ResumePage = () => {
   const [view, setView] = useState<"full" | "fullAlt">("full");
-  const downloads = useMemo(
-    () => resumeData.downloads ?? [],
-    []
-  );
+  const downloads = useMemo(() => resumeData.downloads ?? [], []);
   const highlights =
     view === "full"
       ? resumeData.highlights ?? []
       : resumeData.highlightsAlt ?? resumeData.highlights ?? [];
+  const summary =
+    view === "full"
+      ? resumeData.summary
+      : resumeData.summaryAlt ?? resumeData.summary;
+  const skills =
+    view === "full"
+      ? resumeData.skills ?? []
+      : resumeData.skillsAlt ?? resumeData.skills ?? [];
 
   return (
     <Stack spacing={8}>
@@ -34,7 +39,7 @@ const ResumePage = () => {
             Resume
           </Heading>
           <Text color="gray.600" fontSize="lg">
-            {resumeData.summary}
+            {summary}
           </Text>
         </Stack>
         <Stack
@@ -91,6 +96,11 @@ const ResumePage = () => {
               const impactItems =
                 view === "full" ? role.impact : role.impactAlt ?? role.impact;
 
+              const roleSummary =
+                view === "full"
+                  ? role.summary
+                  : role.summaryAlt ?? role.summary;
+
               return (
                 <Box key={`${role.company}-${role.role}`}>
                   <Stack
@@ -105,6 +115,11 @@ const ResumePage = () => {
                       {role.period}
                     </Text>
                   </Stack>
+                  {roleSummary ? (
+                    <Text color="gray.600" mt={2}>
+                      {roleSummary}
+                    </Text>
+                  ) : null}
                   <Box mt={3}>
                     <BulletAccordion
                       items={impactItems}
@@ -123,7 +138,7 @@ const ResumePage = () => {
               Skills
             </Heading>
             <Wrap>
-              {resumeData.skills.map((skill) => (
+              {skills.map((skill) => (
                 <WrapItem key={skill}>
                   <Tag colorScheme="teal">{skill}</Tag>
                 </WrapItem>
