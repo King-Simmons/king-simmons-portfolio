@@ -62,7 +62,7 @@ const HomePage = () => {
           <Image
               src="/images/memoji.png"
               alt="King Simmons memoji portrait"
-              maxH={{ base: "220px", md: "260px" }}
+              maxH={{ base: "275px", md: "325px" }}
               borderRadius="2xl"
               objectFit="contain"
           />
