@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Heading,
+  Image,
   SimpleGrid,
   Stack,
   Tag,
@@ -17,7 +18,10 @@ const HomePage = () => {
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} alignItems="center">
         <Stack spacing={4}>
           <Heading as="h1" size="2xl">
-            King Simmons · Backend Systems Engineer
+            King Simmons
+          </Heading>
+          <Heading as="h3">
+            Senior Software Engineer
           </Heading>
           <Tag
             alignSelf="flex-start"
@@ -44,20 +48,24 @@ const HomePage = () => {
           </Stack>
         </Stack>
         <Box
-          borderWidth="1px"
-          borderColor="gray.200"
-          borderRadius="2xl"
-          bg="gray.50"
           minH={{ base: "240px", md: "280px" }}
           display="flex"
+          borderWidth="1px"
+          borderColor="white"
+          borderRadius="lg"
+          bg="white"
           alignItems="center"
           justifyContent="center"
           textAlign="center"
           px={6}
         >
-          <Text color="gray.500" fontSize="sm">
-            Minimalist memoji placeholder
-          </Text>
+          <Image
+              src="/images/memoji.png"
+              alt="King Simmons memoji portrait"
+              maxH={{ base: "220px", md: "260px" }}
+              borderRadius="2xl"
+              objectFit="contain"
+          />
         </Box>
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
