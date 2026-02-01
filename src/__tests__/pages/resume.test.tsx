@@ -106,7 +106,7 @@ describe("ResumePage", () => {
 
     await act(async () => {
       await user.click(
-        screen.getByRole("button", { name: /Full view \(alternate\)/i })
+        screen.getByRole("button", { name: /Product Focused/i })
       );
     });
 
