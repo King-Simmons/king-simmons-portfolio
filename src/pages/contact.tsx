@@ -10,15 +10,15 @@ import {
 const contactCards = [
   {
     label: "Email",
-    value: "hello@kingsimmons.design",
-    href: "mailto:hello@kingsimmons.design",
-    description: "Best for project inquiries and collaboration ideas.",
+    value: "kd3business@gmail.com",
+    href: "/contact",
+    description: "Best for business inquiries and open roles.",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/king-simmons",
-    href: "https://linkedin.com/in/king-simmons",
-    description: "Follow my product design case studies and updates.",
+    value: "/in/kingsimmons/",
+    href: "https://www.linkedin.com/in/kingsimmons/",
+    description: "Best for open roles and tech chats.",
   }
 ];
 
@@ -30,9 +30,9 @@ const ContactPage = () => {
           Let&apos;s connect
         </Heading>
         <Text color="gray.600">
-          Whether you&apos;re exploring a new product direction or need design
-          support, I&apos;m happy to chat. Choose the channel that works best for
-          you and I&apos;ll follow up within two business days.
+          Whether you have open roles or want to talk about new tech,
+          I&apos;m happy to chat. Choose the channel that works best for
+          you.
         </Text>
       </Stack>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>

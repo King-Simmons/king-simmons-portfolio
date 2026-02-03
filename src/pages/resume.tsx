@@ -62,7 +62,7 @@ const ResumePage = () => {
               Product Focused
             </Button>
           </ButtonGroup>
-          <HStack spacing={2}>
+          {/* <HStack spacing={2}>
             {downloads.map((link) => (
               <Button
                 as="a"
@@ -76,7 +76,7 @@ const ResumePage = () => {
                 Download {link.label}
               </Button>
             ))}
-          </HStack>
+          </HStack> */}
         </Stack>
       </Stack>
 
@@ -167,7 +167,7 @@ const ResumePage = () => {
           </Heading>
           <BulletAccordion items={highlights} resetSignal={view} />
         </Box>
-
+        {/*
         <HStack spacing={2} flexWrap="wrap">
           {downloads.map((link) => (
             <Button
@@ -182,7 +182,8 @@ const ResumePage = () => {
               Download {link.label}
             </Button>
           ))}
-        </HStack>
+        </HStack>*/
+        }
       </>
     </Stack>
   );
