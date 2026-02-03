@@ -24,21 +24,27 @@ const TestimonialsCarousel = () => {
     () => [
       {
         quote:
-          "King helped our team translate a messy roadmap into a clean, customer-first experience.",
-        name: "Avery Martinez",
-        role: "Head of Product, Brightwave Labs",
+          "I had the pleasure of working on the same team as King at Indeed for a little over a year. He is a strong team player with excellent communication skills, making collaboration both productive and enjoyable. King consistently demonstrated exceptional problem-solving and design abilities, often delivering creative and effective solutions to complex challenges.",
+        name: "Hector Puga",
+        role: "Software Engineer, Indeed",
       },
       {
         quote:
-          "The new design system streamlined our releases and made collaboration feel effortless.",
-        name: "Priya Shah",
-        role: "Engineering Manager, Atlas Commerce",
+          "I am delighted to recommend King for any Software Engineering position. Throughout our time working together, King proved to be a highly engaged and capable teammate who consistently prioritized solving problems independently and effectively.",
+        name: "Jay Pierson",
+        role: "Engineering Manager, Indeed",
       },
       {
         quote:
-          "Thoughtful, fast, and user-centered—King consistently ships polished work.",
-        name: "Jordan Lee",
-        role: "Founder, Studio North",
+          "King’s ability to quickly learn and apply a diverse set of languages, frameworks, and technologies across both front-end and back-end codebases is impressive. His versatility and willingness to tackle complex challenges make him a valuable asset to any team or organization.",
+        name: "Former Colleague",
+        role: "Manager, Indeed",
+      },
+      {
+        quote:
+          "I highly recommend King to any team seeking a talented, collaborative, and solutions-driven professional.",
+        name: "Former Colleague",
+        role: "Software Engineer, Indeed",
       },
     ],
     []

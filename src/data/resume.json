@@ -1,14 +1,14 @@
 {
-  "summary": "Results-driven Software Engineer with 5+ years of experience building scalable backend systems and distributed services using Java, Kotlin, SQL/NoSQL, and cloud platforms. Proven track record of delivering high-impact features, improving observability and reliability, and supporting systems used by millions of users.",
+  "summary": "Results-driven Senior Backend Software Engineer with 5+ years of experience building scalable backend systems\nusing Java, Kotlin, Spring Boot, SQL, NoSQL, and cloud platforms (AWS, GCP). Proven success in delivering high-\nimpact backend services, improving observability and reliability, and supporting systems serving hundreds of\nmillions of users. Strong background in data modeling, messaging systems, and production operations. Adept at\ncross-functional collaboration, rapid problem solving, and improving team velocity through code quality and\nmentorship. Passionate about creating eﬃcient, reliable solutions and continuously growing through learning and\nteam leadership.",
   "summaryAlt": "Full-stack Software Engineer with experience delivering user-facing features and backend services across large-scale consumer platforms. Strong collaborator with product, design, and engineering partners to ship measurable improvements to engagement and discoverability.",
   "downloads": [
     {
       "label": "Backend & Systems PDF",
-      "href": "/resume/king-simmons-backend-systems.pdf"
+      "href": "public/resumes/King_Simmons_Backend_Resume.pdf"
     },
     {
       "label": "UI / Product PDF",
-      "href": "/resume/king-simmons-ui-product.pdf"
+      "href": "public/resumes/King_Simmons_FullStack.pdf"
     }
   ],
   "highlights": [
@@ -43,24 +43,28 @@
     {
       "role": "Senior Software Engineer",
       "company": "The Home Depot",
-      "period": "August 2025 — Present",
-      "summary": "Senior Software Engineer focused on backend systems, observability, and data pipelines supporting internal pricing, logistics, and vendor platforms.",
+      "period": "August 2025 — January 2026",
+      "summary": "Designed, maintained, and deployed distributed backend services supporting pricing, logistics, and vendor\ncommunication systems. Worked across GCP infrastructure, pub/sub messaging, relational databases, and test\nautomation to ensure service reliability and production readiness. Collaborated with cross-functional teams on\narchitecture, debugging, and last-mile delivery under tight deadlines.",
       "summaryAlt": "Senior Software Engineer contributing to cross-functional initiatives across backend services and internal user-facing tools.",
       "impact": [
         {
-          "summary": "Implemented trace context propagation across Pub/Sub services, reducing root-cause debugging time by 30%.",
+          "summary": "Implemented trace context propagation across multiple Pub/Sub services, enabling full end-to-end observability and reducing root-cause debugging time by 30%.",
           "detail": "Enabled end-to-end observability across distributed services handling pricing, logistics, and vendor communication."
         },
         {
-          "summary": "Built a reusable E2E testing framework that reduced manual setup time by 50%.",
+          "summary": "Built a reusable E2E testing framework with templates, a dynamic test data generator, and onboarding docs to reduce manual setup time by 50%.",
           "detail": "Created templates, dynamic test data generators, and onboarding documentation to standardize testing."
         },
         {
-          "summary": "Owned and optimized GCP resources processing 100,000+ daily events.",
+          "summary": "Delivered last-minute architectural fixes to resolve critical production blockers before deployment, preserving delivery timelines for systems used by 1,000+ internal users.",
           "detail": "Managed Pub/Sub topics, BigQuery tables, and scheduled queries to ensure reliable data flow."
         },
         {
-          "summary": "Led backend deployments and schema changes across 5+ services with zero downtime.",
+          "summary": "Owned GCP resources including Pub/Sub, BigQuery tables, and scheduled queries, optimizing data flow across 100,000+ daily events",
+          "detail": "Coordinated PostgreSQL and Oracle schema changes while maintaining production stability."
+        },
+        {
+          "summary": "Led backend deployments and schema changes for PostgreSQL and Oracle databases across 5+ services, ensuring reliable rollouts and maintaining zero-downtime standards.",
           "detail": "Coordinated PostgreSQL and Oracle schema changes while maintaining production stability."
         }
       ],
@@ -87,27 +91,35 @@
       "role": "Software Engineer",
       "company": "Indeed",
       "period": "May 2022 — July 2025",
-      "summary": "Software Engineer working primarily on backend services and distributed systems supporting large-scale profile and discovery platforms.",
+      "summary": "Designed and built backend services and GraphQL APIs powering user-facing dashboards, collaborating cross-functionally to ensure scalability, performance, and reliability. Contributed to CI/CD pipelines and Docker based deployment, automated testing, and production deployment processes to improve system reliability.",
       "summaryAlt": "Full-stack Software Engineer delivering backend services and user-facing features for profile enrichment, notifications, and discovery experiences.",
       "impact": [
         {
-          "summary": "Designed and launched a profile enrichment system that increased profile completeness by ~50%.",
+          "summary": "Designed and launched a profile enrichment system using Java, Kotlin, Spring Boot, PostgreSQL, and AWS S3, increasing profile completeness by 50% and improving discoverability for millions of job seekers.",
           "detail": "Built backend services using Java, Kotlin, Spring Boot, PostgreSQL, and AWS S3 to ingest, validate, and persist profile data."
         },
         {
-          "summary": "Enabled profile-based discovery for 40M+ US and 230M+ global users.",
+          "summary": "Enabled profile-based discovery for 40M+ US and 230M+ global users by leading launch-critical backend service development in Java, resolving 10+ production issues and building dashboards to monitor adoption.",
           "detail": "Led backend service development, resolved production issues, and built dashboards to monitor adoption."
         },
         {
-          "summary": "Improved email notification engagement by 15–20% through backend experimentation.",
+          "summary": "Built and deployed scalable microservices using Kotlin and Spring Boot, integrating with REST APIs and PostgreSQL, and automating infrastructure setup with Terraform to interact with AWS S3.",
           "detail": "Implemented A/B tests and optimized delivery flows in collaboration with product teams."
         },
         {
-          "summary": "Built and maintained scalable microservices using Kotlin and Spring Boot.",
+          "summary": "Improved email engagement for external profiles by leading backend and frontend eﬀorts and utilizing A/B testing, achieving a 15–20% uplift in open and conversion rates.",
           "detail": "Integrated services with PostgreSQL, AWS S3, and internal APIs to support long-term growth."
         },
         {
-          "summary": "Mentored junior engineers and helped stabilize execution after organizational changes.",
+          "summary": "Reduced feature delivery time by ~25% using AI-assisted development tools; collaborated with UX and PMs to optimize user flows and acceptance criteria.",
+          "detail": "Led retrospectives, improved onboarding documentation, and supported team delivery."
+        },
+        {
+          "summary": "Mentored 3+ new engineers, led retrospectives, and introduced process improvements that enhanced team communication post-reorg.",
+          "detail": "Led retrospectives, improved onboarding documentation, and supported team delivery."
+        },
+        {
+          "summary": "Contributed minor frontend refactors to support backend-driven privacy workflows.",
           "detail": "Led retrospectives, improved onboarding documentation, and supported team delivery."
         }
       ],
@@ -138,15 +150,15 @@
       "role": "Software Engineer – Backend Testing & Reliability",
       "company": "General Motors",
       "period": "January 2021 — April 2022",
-      "summary": "Backend-focused engineer specializing in automated testing, service reliability, and CI/CD pipeline improvements.",
+      "summary": "Focused on backend service reliability through automated API testing, CI/CD integration, and validation of distributed system workflows. Designed and executed automated tests for backend RESTful services to ensure\nstable integrations across frontend and backend systems. Collaborated with developers and QA to define test\nplans, acceptance criteria, and improve automated tests coverage in a fast-paced Agile environment.",
       "summaryAlt": "Software Engineer contributing to test automation and quality initiatives across backend and UI-integrated systems.",
       "impact": [
         {
-          "summary": "Automated UI and REST API tests for 15+ features, reducing regression testing time by 50%.",
+          "summary": "Automated UI and REST API tests for 15+ features using Java, Selenium, and REST Assured, reducing regression testing time by 50%.",
           "detail": "Used Java, Selenium, and REST Assured to validate backend service integrations."
         },
         {
-          "summary": "Improved CI/CD workflows to increase iteration velocity by 37%.",
+          "summary": "Improved test automation workflows and CI/CD pipelines in a SAFe Agile environment, increasing iteration velocity by 37%.",
           "detail": "Enhanced automated testing pipelines in a SAFe Agile environment."
         }
       ],
@@ -164,6 +176,7 @@
   ],
   "skills": [
     "Java",
+    "Python",
     "Kotlin",
     "Spring Boot",
     "Distributed Systems",
@@ -178,7 +191,6 @@
     "Automated Testing",
     "REST APIs",
     "GraphQL",
-    "Python",
     "React",
     "TypeScript",
     "Agile"
